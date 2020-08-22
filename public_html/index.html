@@ -1,0 +1,426 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="description" content="">
+        <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+        <meta name="generator" content="Jekyll v4.1.1">
+        <title>Album example · Bootstrap</title>
+
+        <link rel="canonical" href="https://getbootstrap.com/docs/4.5/examples/album/">
+
+        <!-- Bootstrap core CSS -->
+        <link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet">
+
+        <!-- Font Awesome -->
+        <script src="https://kit.fontawesome.com/6c2716f2df.js" crossorigin="anonymous"></script>
+
+        <!-- Vega Lite -->
+        <script src="https://cdn.jsdelivr.net/npm/vega@5.13.0"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-lite@4.14.1"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.10.0"></script>
+
+        <style>
+            .bd-placeholder-img {
+                font-size: 1.125rem;
+                text-anchor: middle;
+                -webkit-user-select: none;
+                -moz-user-select: none;
+                -ms-user-select: none;
+                user-select: none;
+            }
+
+            @media (min-width: 768px) {
+                .bd-placeholder-img-lg {
+                    font-size: 3.5rem;
+                }
+            }
+        </style>
+        <!-- Custom styles for this template -->
+        <link href="album.css" rel="stylesheet">
+    </head>
+    <body>
+        <header>
+            <div class="collapse bg-dark" id="navbarHeader">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-8 col-md-7 py-4">
+                            <h4 class="text-white">Hernán Martínez Reumann</h4>
+                            <p class="text-muted">Como trabajo de fin de la materia Visualizacion de la Información de la Diplomatura en Big Data del ITBA,
+                                me propuse recopilar datos de algo de interés personal y luego aplicar las herramientas que vimos en la materia.</p>
+                        </div>
+                        <div class="col-sm-4 offset-md-1 py-4">
+                            <h4 class="text-white">Contacto</h4>
+                            <ul class="list-unstyled">
+                                <li><a href="https://twitter.com/HMReumann" class="text-white">Seguime en Twitter</a></li>
+                                <li><a href="https://www.facebook.com/hmreumann" class="text-white">Buscame en Facebook</a></li>
+                                <li><a href="https://www.linkedin.com/in/hmreumann" class="text-white">Agregame en LinkedIn</a></li>
+                                <li><a href="https://github.com/hmreumann/infovis" class="text-white">Chequeá mi Info-Vis en GitHub</a></li>
+                                <li><a href="mailto:hmreumann@hotmail.com" class="text-white">Mandame un email</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="navbar navbar-dark bg-dark shadow-sm">
+                <div class="container d-flex justify-content-between">
+                    <a href="#" class="navbar-brand d-flex align-items-center">
+                        <i class="fas fa-dog"></i><i class="fas fa-cat ml-4 mr-4"></i>
+                        <strong> Info Vis 2020</strong>
+                    </a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarHeader" aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                </div>
+            </div>
+        </header>
+
+        <main role="main">
+
+            <section class="jumbotron text-center">
+                <div class="container">
+                    <h1>Lisa y Lua, mis mascotas <i class="fas fa-paw"></i></h1>
+
+                    <p class="lead text-muted">La primera en llegar a la familia fue Lua, llegó a la familia en febrero del 2020, la trajimos de la base cuando tenía 1 mes, es una perra mestiza de manto negro con blanco. Después llegó Lisa, también me la traje de la base a fines de mayo, no sabemos que edad tiene pero anda en su primer año.</p>
+                    <p>Son las dos cachorras y nos llenan de alegría, pero no siempre, a veces nos hacen enojar. Empezamos a registrar los eventos que nos generaron ambas sensaciones: "enojos" y "alegrias".</p>
+                </div>
+            </section>
+
+            <div class="album py-5 bg-light">
+                <div class="container">
+
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="card mb-4 shadow-sm">
+                                <img src="../img/lua-durmiendo.jpg" class="img-thumbnail">
+                                <div class="card-body">
+                                    <p class="card-text text-center">Lua</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card mb-4 shadow-sm">
+                                <img src="../img/lisa.jpg" class="img-thumbnail">
+                                <div class="card-body">
+                                    <p class="card-text text-center">Lisa</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card mb-4 shadow-sm">
+                                <img src="../img/lua-pesada.jpg" class="img-thumbnail">
+                                <div class="card-body">
+                                    <p class="card-text text-center">Lua en el escritorio</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="card mb-4 shadow-sm">
+                                <img src="../img/lisaylua.jpg" class="img-thumbnail">
+                                <div class="card-body">
+                                    <p class="card-text text-center">Lua molestando a la gata</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="card mb-4 shadow-sm">
+                                <img src="../img/lisaylua2.jpg" class="img-thumbnail">
+                                <div class="card-body">
+                                    <p class="card-text text-center">Y la sigue molestando...</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4">
+                            <div class="card mb-4 shadow-sm">
+                                <h3 class="card-header">Registros</h3>
+                                <div class="card-body">
+
+                                    <p class="card-text">Los eventos se registraron de la siguiente manera:</p>
+                                    <ul>
+                                        <li>Date</li>
+                                        <li>Time</li>
+                                        <li>Who (Lisa o Lua)</li>
+                                        <li>Category (Enojo o Alegría)</li>
+                                        <li>Why (La causa)</li>
+                                    </ul>
+                                    <p class="card-text">Durante el momento libres, hice memoría para recordar los retos o las alegrías para asentarlos en una planilla CSV.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-8">
+                            <div class="card mb-4 shadow-sm">
+                                <h3 class="card-header">Período analizado</h3>
+                                <div class="card-body">
+
+                                    <div id="per" class="col-md-12"></div>
+
+                                    <script>
+                                        // Assign the specification to a local variable vlSpec.
+                                        var vlper = {
+                                            "width": "container",
+                                            "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
+                                            "data": {"url": "../data/lua_lisa.json"},
+                                            "mark": {"type": "line"},
+                                            "encoding": {
+                                                "x": {"time-unit": "day", "field": "date",
+                                                    "title": "Día",
+                                                    "axis": {"labelAngle": 15}},
+                                                "y": {"aggregate": "count",
+                                                    "title": "Cantidad de registros"}
+                                            }
+                                        };
+                                        // Embed the visualization in the container with id `vis`
+                                        vegaEmbed('#per', vlper);
+                                    </script>
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4">
+                            <div class="card mb-4 shadow-sm">
+                                <div class="card-body">
+                                    <div id="vis" class="col-md-12"></div>
+                                    <script>
+                                        // Assign the specification to a local variable vlSpec.
+                                        var vlSpec = {
+                                            "width": "container",
+                                            "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
+                                            "title": "Cantidad de registros",
+                                            "data": {"url": "../data/lua_lisa.json"},
+                                            "mark": {"type": "bar", "cornerRadiusTopLeft": 3, "cornerRadiusTopRight": 3},
+                                            "encoding": {
+                                                "x": {"field": "who", "type": "nominal",
+                                                    "title": "Quien",
+                                                    "axis": {"labelAngle": 15}},
+                                                "y": {"aggregate": "count",
+                                                    "title": null},
+                                                "color": {"field": "category",
+                                                    "title": "Categoria"}
+                                            }
+                                        };
+                                        // Embed the visualization in the container with id `vis`
+                                        vegaEmbed('#vis', vlSpec);
+                                    </script>
+
+                                    <p class="card-text">Cantidad de eventos registrados  por mascota y por categoria</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-8">
+                            <div class="card mb-4 shadow-sm">
+                                <div class="card-body">
+                                    <div id="scat" class="col-md-12"></div>
+                                    <script>
+                                        // Assign the specification to a local variable vlSpec.
+                                        var vlscatter = {
+                                            "width": "container",
+                                            "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
+                                            "title": "Scatter Plot de todos los eventos registrados",
+                                            "data": {"url": "../data/lua_lisa.json"},
+                                            "mark": {"type": "point"},
+                                            "encoding": {
+                                                "x": {"field": "date",
+                                                    "title": "Día",
+                                                    "axis": {"labelAngle": 15}},
+                                                "y": {"field": "time",
+                                                    "title": "Hora", "sort": "descending"},
+                                                "color": {"field": "who",
+                                                    "title": "Quien"},
+                                                "shape": {"field": "category",
+                                                    "title": "Categoria"},
+                                                "tooltip": [{"field": "category", "type": "nominal"},
+                                                    {"field": "why", "type": "nominal"}]
+                                            }
+                                        };
+                                        // Embed the visualization in the container with id `vis`
+                                        vegaEmbed('#scat', vlscatter);
+                                    </script>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4">
+                            <div class="card mb-4 shadow-sm">
+                                <div class="card-body">
+                                    <div id="scatlisa" class="col-md-12"></div>
+                                    <script>
+                                        // Assign the specification to a local variable vlSpec.
+                                        var vlscatlisa = {
+                                            "width": "container",
+                                            "height": 150,
+                                            "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
+                                            "title": "Registros de Lisa",
+                                            "data": {"url": "../data/lua_lisa.json"},
+                                            "transform": [
+                                                {
+                                                    "filter": {"field": "who", "equal": "Lisa"}
+                                                }
+                                            ],
+                                            "mark": {"type": "point"},
+                                            "encoding": {
+                                                "x": {"field": "date",
+                                                    "title": "Día",
+                                                    "axis": {"labelAngle": 45}},
+                                                "y": {"field": "time",
+                                                    "title": "Hora", "sort": "descending"},
+                                                "color": {"field": "category",
+                                                    "title": "Categoria"},
+                                                "shape": {"field": "why", "type": "nominal"},
+                                                "tooltip": [{"field": "category", "type": "nominal"},
+                                                    {"field": "why", "type": "nominal"}]
+                                            }
+                                        };
+                                        // Embed the visualization in the container with id `vis`
+                                        vegaEmbed('#scatlisa', vlscatlisa);
+                                    </script>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-8">
+                            <div class="card mb-4 shadow-sm">
+                                <div class="card-body">
+                                    <div id="scatlua" class="col-md-12"></div>
+                                    <script>
+                                        // Assign the specification to a local variable vlSpec.
+                                        var vlscatlua = {
+                                            "width": "container",
+                                            "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
+                                            "title": "Registros de Lua",
+                                            "data": {"url": "../data/lua_lisa.json"},
+                                            "transform": [
+                                                {
+                                                    "filter": {"field": "who", "equal": "Lua"}
+                                                }
+                                            ],
+                                            "mark": {"type": "point"},
+                                            "encoding": {
+                                                "x": {"field": "date",
+                                                    "title": "Día",
+                                                    "axis": {"labelAngle": 15}},
+                                                "y": {"field": "time",
+                                                    "title": "Hora", "sort": "descending"},
+                                                "color": {"field": "category",
+                                                    "title": "Categoria"},
+                                                "shape": {"field": "why", "type": "nominal"},
+
+                                                "tooltip": [{"field": "category", "type": "nominal"},
+                                                    {"field": "why", "type": "nominal"}]
+                                            }
+                                        };
+                                        // Embed the visualization in the container with id `vis`
+                                        vegaEmbed('#scatlua', vlscatlua);
+                                    </script>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6">
+                            <div class="card mb-4 shadow-sm">
+                                <div class="card-body">
+                                    <div id="barwhyalegria" class="col-md-12"></div>
+                                    <script>
+                                        // Assign the specification to a local variable vlSpec.
+                                        var barwhyalegria = {
+                                            "width": "container",
+                                            "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
+                                            "title": "Causas de alegrías",
+                                            "data": {"url": "../data/lua_lisa.json"},
+                                            "transform": [
+                                                {
+                                                    "filter": {"field": "category", "equal": "alegria"}
+                                                }
+                                            ],
+                                            "mark": {"type": "bar", "cornerRadiusTopLeft": 3, "cornerRadiusTopRight": 3},
+                                            "encoding": {
+                                                "x": {"aggregate": "count",
+                                                    "title": "Cantidad"},
+                                                "y": {"field": "why", "type": "nominal",
+                                                    "title": "Causas",
+                                                    "sort": "-x"},
+                                                "color": {"field": "who",
+                                                    "title": "Quien"}
+                                            }
+                                        };
+                                        // Embed the visualization in the container with id `vis`
+                                        vegaEmbed('#barwhyalegria', barwhyalegria);
+                                    </script>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6">
+                            <div class="card mb-4 shadow-sm">
+                                <div class="card-body">
+                                    <div id="barwhyenojo" class="col-md-12"></div>
+                                    <script>
+                                        // Assign the specification to a local variable vlSpec.
+                                        var barwhyenojo = {
+                                            "width": "container",
+                                            "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
+                                            "title": "Causas de enojos",
+                                            "data": {"url": "../data/lua_lisa.json"},
+                                            "transform": [
+                                                {
+                                                    "filter": {"field": "category", "equal": "enojo"}
+                                                }
+                                            ],
+                                            "mark": {"type": "bar", "cornerRadiusTopLeft": 3, "cornerRadiusTopRight": 3},
+                                            "encoding": {
+                                                "x": {"aggregate": "count",
+                                                    "title": "Cantidad"},
+                                                "y": {"field": "why", "type": "nominal",
+                                                    "title": "Causas",
+                                                    "sort": "-x"},
+                                                "color": {"field": "who",
+                                                    "title": "Quien"}
+                                            }
+                                        };
+                                        // Embed the visualization in the container with id `vis`
+                                        vegaEmbed('#barwhyenojo', barwhyenojo);
+                                    </script>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4">
+                            <div class="card mb-4 shadow-sm">
+                                <div class="card-body">
+
+                                    <p class="card-text">Para las visualizaciones se utilizaron las siguientes herramientas:</p>
+                                    <ul>
+                                        <li>Vega-Lite</li>
+                                    </ul>
+
+                                    <p class="card-text">Para la presentación:</p>
+                                    <ul>
+                                        <li>Bootstrap 4</li>
+                                        <li>Font Awesome 6</li>
+                                    </ul>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </main>
+
+        <footer class="text-muted">
+            <div class="container">
+                <p class="float-right">
+                    <a href="#">De vuelta al inicio</a>
+                </p>
+                <p>Esta visualización fue realizada por &copy; Hernán Martínez Reumann</p>
+                
+            </div>
+        </footer>
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script>window.jQuery || document.write('<script src="../assets/js/vendor/jquery.slim.min.js"><\/script>')</script><script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
+</html>

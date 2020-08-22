@@ -1,0 +1,16 @@
+{
+    "name": "lua-lisa",
+    "version": "1.0.0",
+    "keywords": [
+        "util",
+        "functional",
+        "server",
+        "client",
+        "browser"
+    ],
+    "author": "hmreu",
+    "contributors": [],
+    "dependencies": {
+        "bootstrap-icons": "^1.0.0-alpha5"
+    }
+}
